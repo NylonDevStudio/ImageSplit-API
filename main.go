@@ -6,6 +6,7 @@ import (
     "log"
     "strings"
     "os"
+    "strconv"
 
     gim "github.com/ozankasikci/go-image-merge"
 )
@@ -22,16 +23,12 @@ func main() {
 }
 
 func makeImage(c *gin.Context) {
-    id := c.Param("id")
+    id := c.Param("id");
     var s = id
     
-    height := c.Param("h")
-    var h = height
+    h, _ := strconv.Atoi("5")
+    w, _ := strconv.Atoi("5")
     
-    height := c.Param("w")
-    var w = width
-  
-  
     // create an array of the images we have
     var images = strings.Split(s, "-")
 
