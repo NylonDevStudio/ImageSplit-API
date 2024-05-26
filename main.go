@@ -19,7 +19,7 @@ func main() {
     router := gin.Default()
     router.GET("/tile/:w/:h/:id", makeImage)
     
-    router.Run("localhost:8088")
+    router.Run(":8080")
 }
 
 func makeImage(c *gin.Context) {
